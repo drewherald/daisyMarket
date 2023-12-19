@@ -1,0 +1,17 @@
+.flexContainer{
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    padding: 40px 0;
+}
+
+.flexContainer div img{
+    max-height: 70vh;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
