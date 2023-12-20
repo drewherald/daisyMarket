@@ -19,6 +19,11 @@
         justify-content: space-evenly;
     }
 
+    ul:hover{
+        color:#FFDD15;
+        cursor: pointer;
+    }
+
     .links{
         display: none;
     }
@@ -75,4 +80,5 @@ ul{
 
 .links svg:hover{
     fill: #FFDD15;
+    cursor: pointer;
 }
