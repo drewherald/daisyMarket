@@ -1,3 +1,29 @@
+@media screen and (max-width: 600px){
+    .logo{
+        font-size: 8pt;
+        padding-right: 0;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+    
+    .logo img{
+        padding-right: 0 !important;
+    }
+
+    li{
+        padding: 10px !important;
+        text-align: center;
+    }
+
+    ul{
+        justify-content: space-evenly;
+    }
+
+    .links{
+        display: none;
+    }
+}
+
 .top{
     display: flex;
     justify-content: center;
@@ -10,16 +36,16 @@
 }
 
 .logo img{
-    max-width: 750px;
-    max-height: 75px;
-    padding-right: 20px;
+    max-height: 50px;
+    padding-right: 40px;
 }
 
 .flexBox{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 30px;
+    padding: 10px 30px;
+    max-width: 100vw;
 }
 
 .logo{

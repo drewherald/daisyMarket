@@ -7,7 +7,8 @@ import { useState } from 'react'
 
 export default function Home() {
 
-    const [load, setLoad] = useState(true)
+
+    const [load, setLoad] = useState(false)
     const f = false
     setTimeout(() => setLoad(f), 5000)
  

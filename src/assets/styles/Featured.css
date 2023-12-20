@@ -1,3 +1,16 @@
+@media screen and (max-width: 600px){
+
+    .flexContainer div img{
+        width: 100vw;
+    }
+
+    .flexContainer{
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+}
+
 .flexContainer{
     display: flex;
     width: 100vw;
