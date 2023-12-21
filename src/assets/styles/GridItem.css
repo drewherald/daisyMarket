@@ -1,0 +1,31 @@
+.productImg{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.imgContainer{
+    height: 250px;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+.textContainer{
+   display: grid;
+   grid-template-columns: 1;
+   grid-template-rows: 4fr 1fr;
+}
+
+.titleText{
+    padding: 5px 20px;
+}
+
+p{
+    font-size: 8px;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.bigContainer{
+    width: 25vw;
+}

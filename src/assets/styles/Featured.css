@@ -20,6 +20,7 @@
 
 .flexContainer div img{
     max-width: 30vw;
+    padding-bottom: 50px;
 }
 
 .title{
