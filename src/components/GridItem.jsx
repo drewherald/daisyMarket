@@ -9,7 +9,7 @@ export default function GridItem({imgSrc, name, price}) {
         </div>
         <div>
             <p className='titleText'>{name}</p>
-            <p>{price}</p>
+            <p>${(Math.round(price * 100) / 100).toFixed(2)}</p>
         </div>
       </div>
   )

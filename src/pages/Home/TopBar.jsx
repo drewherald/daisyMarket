@@ -1,6 +1,8 @@
 import React from 'react'
 import daisyLogo from '../../assets/daisyMarketLogo.png'
 import '../../assets/styles/topBar.css'
+import { Link, Route, Routes } from 'react-router-dom'
+
 
 export default function TopBar() {
   return (
@@ -10,9 +12,9 @@ export default function TopBar() {
         </span>
         <div className='flexBox'>
             <div className='logo'>
-                <img src={daisyLogo} alt="" />
+                <Link to={'/'}> <img src={daisyLogo} alt="" /></Link>
                 <ul>
-                    <li>Shop</li>
+                    <li><Link to={'/shop'} className='link'>Shop</Link></li>
                     <li>Collections</li>
                     <li>Locations</li>
                 </ul>
