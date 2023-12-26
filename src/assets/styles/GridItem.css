@@ -20,7 +20,7 @@
     padding: 5px 20px;
 }
 
-p{
+.gridInfo p{
     font-size: 8px;
     overflow: hidden;
     padding: 0 20px;
@@ -28,4 +28,5 @@ p{
 
 .bigContainer{
     width: 25vw;
+    cursor: pointer;
 }

@@ -2,6 +2,10 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import getShopItems from '../../utils/getShopItems'
 import GridItem from '../../components/GridItem'
+import TopBar from '../Home/TopBar'
+import '../../assets/styles/Shop/ProductDetails.css'
+import ProductItem from './ProductItem'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function ProductDetails() {
   const id = useParams()
@@ -11,12 +15,15 @@ export default function ProductDetails() {
     <></>
   );
 
-  return (
-    <div>
-         {shopItems.map((item, index) => (
-          item.id ==id.id ? <GridItem imgSrc={item.image} key={item.id} name={item.title} price={item.price}/> : "" 
 
-          ))}
+
+  return (
+    <div className='mainFlex'>
+        <TopBar></TopBar>
+        <div className='mainContent' key={uuidv4()}>
+           <ProductItem item={shopItems[parseInt(id.id, 10)-1]} /> 
+        </div>
+        
     </div>
   )
 }
