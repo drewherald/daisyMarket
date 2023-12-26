@@ -13,7 +13,9 @@ export default function Shop() {
     <div>
         <TopBar className="topbar" />
 
-        {shopItems &&  <GridItemHolder itemList={shopItems} />}
+        <div className='gridContainer' >
+          {shopItems &&  <GridItemHolder itemList={shopItems} />}
+        </div>
     </div>
   )
 }

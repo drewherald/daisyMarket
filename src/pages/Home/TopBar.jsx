@@ -14,7 +14,7 @@ export default function TopBar() {
             <div className='logo'>
                 <Link to={'/'}> <img src={daisyLogo} alt="" /></Link>
                 <ul>
-                    <li><Link to={'/shop'} className='link'>Shop</Link></li>
+                    <li><Link to={'/product'} className='link'>Shop</Link></li>
                     <li>Collections</li>
                     <li>Locations</li>
                 </ul>

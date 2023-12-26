@@ -6,6 +6,7 @@ import GridItemHolder from '../../components/GridItemHolder'
 import getShopItems from '../../utils/getShopItems'
 import DaisyGif from '../../assets/daisy.gif'
 
+
 export default function Home() {
 
  /*const [load, setLoad] = useState(false)
@@ -33,7 +34,7 @@ export default function Home() {
                    
                    
                 </div>
-    
+               
                 
                 
             </>
