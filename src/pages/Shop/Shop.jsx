@@ -3,6 +3,7 @@ import '../../assets/styles/Shop/Shop.css'
 import GridItemHolder from '../../components/GridItemHolder'
 import getShopItems from '../../utils/getShopItems'
 import TopBar from '../Home/TopBar'
+import DaisyFooter from '../Home/DaisyFooter'
 
 export default function Shop() {
 
@@ -11,10 +12,16 @@ export default function Shop() {
     
   return (
     <div>
-        <TopBar className="topbar" />
+      <div className="topBar" >
+        <TopBar />
+      </div>
+        
 
         <div className='gridContainer' >
           {shopItems &&  <GridItemHolder itemList={shopItems} />}
+        </div>
+        <div className='footerShop'>
+          <DaisyFooter />
         </div>
     </div>
   )

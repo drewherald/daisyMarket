@@ -1,9 +1,40 @@
 .foot{
     width: 100%;
-    height: 150px;
+    height: 50px;
     position: relative;
     bottom: 0;
     background-color: black;
     color: #FFDD15;
+}
+
+.footContainer{
     padding: 50px;
+    background-color: black;
+}
+
+.alias{
+    text-align: right;
+    font-size: 6pt;
+}
+
+.mailList{
+    font-size: 10pt;
+    padding-bottom: 5px;
+}
+
+.mailListForm input{
+    font-size: 8pt;
+    color: black;
+    background-color: #FFDD15;
+    border: none;
+    padding: 5px;
+}
+
+.mailListForm button{
+    border: none;
+    padding: 5px;
+    background-color: lightgray;
+    color: black;
+    font-size: 8pt;
+    margin-left: 10px;
 }

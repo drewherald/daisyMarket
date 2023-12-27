@@ -5,6 +5,7 @@ import '../../assets/styles/Home.css'
 import GridItemHolder from '../../components/GridItemHolder'
 import getShopItems from '../../utils/getShopItems'
 import DaisyGif from '../../assets/daisy.gif'
+import DaisyFooter from './DaisyFooter'
 
 
 export default function Home() {
@@ -29,7 +30,11 @@ export default function Home() {
                     <div className='frontPage'>
                         <TopBar className="topbar" />
                         <Featured />
-                        {shopItems &&  <GridItemHolder itemList={shopItems} />}
+                        {shopItems &&  <GridItemHolder itemList={shopItems}/>}
+                        <section className='footerHome'>
+                            <DaisyFooter />
+                        </section>
+                        
                     </div>
                    
                    
