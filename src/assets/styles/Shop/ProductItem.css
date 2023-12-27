@@ -1,6 +1,6 @@
 .productItemContainer{
     display: flex;
-    padding: 50px 0px;
+    padding: 100px 0px ;
     justify-content: space-between;
     width: 100%;
 }
@@ -13,7 +13,7 @@
     width: 60%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: flex-start
 ;}
 
 .productDetailContainer{
@@ -26,6 +26,7 @@
 .productDetailContainer div{
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     padding-right: 200px;
 }

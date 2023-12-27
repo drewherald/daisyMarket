@@ -6,6 +6,7 @@ import TopBar from '../Home/TopBar'
 import '../../assets/styles/Shop/ProductDetails.css'
 import ProductItem from './ProductItem'
 import { v4 as uuidv4 } from 'uuid'
+import DaisyFooter from '../Home/DaisyFooter'
 
 export default function ProductDetails() {
   const id = useParams()
@@ -23,7 +24,7 @@ export default function ProductDetails() {
         <div className='mainContent' key={uuidv4()}>
            <ProductItem item={shopItems[parseInt(id.id, 10)-1]} /> 
         </div>
-        
+        <DaisyFooter />
     </div>
   )
 }
