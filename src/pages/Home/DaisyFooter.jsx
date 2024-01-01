@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../assets/styles/DaisyFooter.css'
+import EmailContact from '../../components/EmailContact'
+
 
 export default function DaisyFooter() {
   return (
@@ -9,10 +11,7 @@ export default function DaisyFooter() {
                 <h5>DAISY MARKET FASHION COLLECTIVE</h5>
                 <br />
                 <p className='mailList'>JOIN OUR MAILING LIST:</p>
-                <form className='mailListForm'>
-                    <input type="email" id='email' name='email' placeholder='EMAIL'/>
-                    <button type='submit'>SUBMIT</button>
-                </form>
+                <EmailContact />
             </div> 
             <p className='alias'>2023 Alias Media & Design Co LLC</p>
         </div>

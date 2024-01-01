@@ -9,8 +9,13 @@ export default function Shop() {
 
     const {shopItems, error, loading} = getShopItems(16)
 
-    
-  return (
+    if (error) return <p>A network error was encountered</p>;
+    if (loading) return (
+        <div className='loadShop'>
+        </div>
+
+    );
+    return (
     <div>
       <div className="topBar" >
         <TopBar />
