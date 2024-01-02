@@ -5,7 +5,7 @@ import getShopItems from '../../utils/getShopItems'
 import TopBar from '../Home/TopBar'
 import DaisyFooter from '../Home/DaisyFooter'
 
-export default function Shop() {
+export default function Shop({cartSize}) {
 
     const {shopItems, error, loading} = getShopItems(16)
 
@@ -18,7 +18,7 @@ export default function Shop() {
     return (
     <div>
       <div className="topBar" >
-        <TopBar />
+        <TopBar cartSize={cartSize} />
       </div>
         
 

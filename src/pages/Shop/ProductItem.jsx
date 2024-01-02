@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../assets/styles/Shop/ProductItem.css'
 
 function capFirst(string){
@@ -11,9 +11,22 @@ function formatString(string) {
     return split.join(' ')
 }
 
-export default function ProductItem(item) {
+export default function ProductItem({item, cartUpdater}) {
 
-    const imgSrc = item.item.image
+    const imgSrc = item.image
+
+    const addToCart = () => {
+
+        let object = {
+            title: item.title,
+            price: item.price,
+            image: imgSrc,
+            id: item.id
+        }
+
+        cartUpdater(object)
+    }
+
 
   return (
     <div className='productItemContainer'>
@@ -22,10 +35,11 @@ export default function ProductItem(item) {
         </div>
         <div className='productDetailContainer'>
             <div>
-                <p className='productCategory'>{formatString(item.item.category)}</p>
-                <h2 className='productTitle'>{`${item.item.title}`}</h2>
-                <p>${(Math.round(item.item.price * 100) / 100).toFixed(2)}</p>
-                <p className='description'>Description: <br /> {item.item.description}</p>
+                <p className='productCategory'>{formatString(item.category)}</p>
+                <h2 className='productTitle'>{`${item.title}`}</h2>
+                <p>${(Math.round(item.price * 100) / 100).toFixed(2)}</p>
+                <p className='description'>Description: <br /> {item.description}</p>
+                <button className='addCart' onClick={() => addToCart()}>Add To Cart</button>
             </div>
         </div>
            

@@ -8,7 +8,7 @@ import DaisyGif from '../../assets/daisy.gif'
 import DaisyFooter from './DaisyFooter'
 
 
-export default function Home() {
+export default function Home({cartSize}) {
 
  /*const [load, setLoad] = useState(false)
     const f = false
@@ -28,7 +28,7 @@ export default function Home() {
             <>
                 <div className='mainContainer'>
                     <div className='frontPage'>
-                        <TopBar className="topbar" />
+                        <TopBar className="topbar" cartSize={cartSize}/>
                         <Featured />
                         {shopItems &&  <GridItemHolder itemList={shopItems}/>}
                         <section className='footerHome'>

@@ -33,7 +33,7 @@
 
 .description{
     font-size: 8pt;
-    padding-top: 40px;
+    padding: 40px 0;
 }
 
 .productTitle{
@@ -43,4 +43,12 @@
 
 .productCategory{
     font-size: 8pt;
+}
+
+.addCart{
+    background-color: #FFDD15;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 8em;
+    cursor: pointer;
 }
