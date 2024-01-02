@@ -4,6 +4,9 @@ import EmailContact from '../../components/EmailContact'
 
 
 export default function DaisyFooter() {
+
+    let date = new Date().getFullYear() 
+
   return (
     <footer className='foot'>
         <div className='footContainer'>
@@ -13,7 +16,7 @@ export default function DaisyFooter() {
                 <p className='mailList'>JOIN OUR MAILING LIST:</p>
                 <EmailContact />
             </div> 
-            <p className='alias'>2023 Alias Media & Design Co LLC</p>
+            <p className='alias'>{date} Alias Media & Design Co LLC</p>
         </div>
     </footer>
   )
