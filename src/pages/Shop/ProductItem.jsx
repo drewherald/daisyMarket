@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../../assets/styles/Shop/ProductItem.css'
+import { v4 as uuidv4 } from 'uuid';
 
 function capFirst(string){
     return string.charAt(0).toUpperCase() + string.slice(1)
@@ -21,7 +22,7 @@ export default function ProductItem({item, cartUpdater}) {
             title: item.title,
             price: item.price,
             image: imgSrc,
-            id: item.id
+            id: uuidv4()
         }
 
         cartUpdater(object)

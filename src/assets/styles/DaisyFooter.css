@@ -37,4 +37,9 @@
     color: black;
     font-size: 8pt;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.mailListForm button:hover{
+    background-color: #FFDD15;
 }

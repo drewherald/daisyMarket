@@ -13,3 +13,7 @@
 .mainCartContent{
     min-height: 100dvh;
 }
+
+.cartItems{
+    padding: 0 10dvw;
+}

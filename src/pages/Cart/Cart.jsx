@@ -5,7 +5,7 @@ import DaisyFooter from '../Home/DaisyFooter';
 import '../../assets/styles/Cart/Cart.css'
 import CartItem from './CartItem';
 
-export default function Cart({cartSize, cart}) {
+export default function Cart({cartSize, cart, removeCart}) {
 
     const {shopItems, error, loading} = getShopItems(16)
 
@@ -42,10 +42,12 @@ export default function Cart({cartSize, cart}) {
         <div className="topBar" >
             <TopBar cartSize={cartSize} />
         </div>
-
-        {cart.map((cartItm) => 
-            <CartItem title = {cartItm.title} price={cartItm.price} img={cartItm.image} id={cartItm.id}/>
-        )}
+        <div className='cartItems'>
+            {cart.map((cartItm) => 
+                <CartItem title = {cartItm.title} price={cartItm.price} img={cartItm.image} id={cartItm.id} removeCart={removeCart}/>
+            )}
+        </div>
+       
         
     </section>
     <section className='cartFooter'>

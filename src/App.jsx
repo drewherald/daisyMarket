@@ -17,12 +17,19 @@ export default function App() {
       setCartSize(cart.length)
   }
 
+  const removeCart = (id) => {
+    let newCart = cart
+    newCart = newCart.filter(e => e.id != id)
+    setCart(newCart)
+    setCartSize(cart.length-1)
+  }
+
   return (
     <>
     <Routes>
       <Route path='/product/:id' element={<ProductDetails cartUpdater={updateCart} cart={cart} cartSize = {cartSize}/>} />
       <Route path="/product" element={<Shop cartSize={cartSize}/>} />
-      <Route path='/cart' element = {<Cart cartSize={cartSize} cart={cart} />} />
+      <Route path='/cart' element = {<Cart cartSize={cartSize} cart={cart} removeCart={removeCart}  />} />
       <Route path='/' element={<Home cartSize={cartSize}/>} />
     </Routes>
     </>

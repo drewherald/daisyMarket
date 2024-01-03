@@ -53,3 +53,8 @@
     border-radius: 8em;
     cursor: pointer;
 }
+
+.addCart:hover{
+    background-color: black;
+    color: white;
+}
