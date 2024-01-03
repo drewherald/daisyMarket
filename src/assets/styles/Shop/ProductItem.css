@@ -2,7 +2,7 @@
     display: flex;
     padding: 100px 0px ;
     justify-content: space-between;
-    width: 100%;
+    min-width: 100dvw;
 }
 
 .productItemImg{
@@ -21,6 +21,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    padding-bottom: 200px;
 }
 
 .productDetailContainer div{

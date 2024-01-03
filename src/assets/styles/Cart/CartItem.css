@@ -1,0 +1,10 @@
+.cartImg{
+    max-height: 20dvh;
+    padding-right: 40px;
+}
+
+.mainCartItemContainer{
+    display: flex;
+    justify-content: center;
+}
+

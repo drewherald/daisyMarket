@@ -3,6 +3,7 @@ import Home from './pages/Home/Home'
 import { Route, Routes } from 'react-router-dom'
 import Shop from './pages/Shop/Shop'
 import ProductDetails from './pages/Shop/ProductDetails'
+import Cart from './pages/Cart/Cart'
 
 export default function App() {
 
@@ -20,8 +21,9 @@ export default function App() {
     <>
     <Routes>
       <Route path='/product/:id' element={<ProductDetails cartUpdater={updateCart} cart={cart} cartSize = {cartSize}/>} />
-      <Route path="/product" element={<Shop cartSize={cartSize}/>}></Route>
-      <Route path='/' element={<Home cartSize={cartSize}/>}></Route>
+      <Route path="/product" element={<Shop cartSize={cartSize}/>} />
+      <Route path='/cart' element = {<Cart cartSize={cartSize} cart={cart} />} />
+      <Route path='/' element={<Home cartSize={cartSize}/>} />
     </Routes>
     </>
    

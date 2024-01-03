@@ -1,0 +1,15 @@
+.emptyCartContent{
+    min-height: 100dvh;
+}
+
+.emptyCartText{
+    padding-top: 200px;
+}
+
+.emptyCartContent p{
+    text-align: center;
+}
+
+.mainCartContent{
+    min-height: 100dvh;
+}

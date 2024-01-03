@@ -5,6 +5,6 @@
 
 .mainContent{
     display: flex;
-    height: 90vh;
+    min-height: 90vh;
 
 }
