@@ -1,3 +1,32 @@
+@media screen and (max-width: 600px){
+    .productDetailContainer div{
+        padding-right: 0 !important;
+        text-align: center;
+        align-items: center !important;
+    }
+
+    .productDetailContainer div p{
+        text-align: center;
+    }
+
+    .productDetailContainer{
+        width: 80% !important;
+        padding-bottom: 100px !important;
+    }
+
+    .productItemContainer{
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0 !important;
+    }
+
+    .productCategory{
+        padding-top: 10px;
+    }
+
+
+}
+
 .productItemContainer{
     display: flex;
     padding: 100px 0px ;

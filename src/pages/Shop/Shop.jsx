@@ -7,7 +7,7 @@ import DaisyFooter from '../Home/DaisyFooter'
 
 export default function Shop({cartSize}) {
 
-    const {shopItems, error, loading} = getShopItems(16)
+    const {shopItems, error, loading} = getShopItems(15)
 
     if (error) return <p>A network error was encountered</p>;
     if (loading) return (
@@ -22,7 +22,7 @@ export default function Shop({cartSize}) {
       </div>
         
 
-        <div className='gridContainer' >
+        <div className='shopGridContainer' >
           {shopItems &&  <GridItemHolder itemList={shopItems} />}
         </div>
         <div className='footerShop'>

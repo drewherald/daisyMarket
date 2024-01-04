@@ -14,7 +14,7 @@ export default function Home({cartSize}) {
     const f = false
     setTimeout(() => setLoad(f), 5000)*/
 
-    const {shopItems, error, loading} = getShopItems(8)
+    const {shopItems, error, loading} = getShopItems(3)
 
         if (error) return <p>A network error was encountered</p>;
         if (loading) return (

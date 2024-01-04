@@ -11,7 +11,7 @@ export default function TopBar({cartSize}) {
         <span className='top'>
             WELCOME TO DAISY MARKET        
         </span>
-        <div className='flexBox'>
+        <div className='topBarFlexBox'>
             <div className='logo'>
                 <Link to={'/'}> <img src={daisyLogo} alt="" /></Link>
                 <ul>

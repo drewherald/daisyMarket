@@ -13,10 +13,13 @@ export default function CartItem({title, price, img, id, removeCart}) {
                 <h5>{title}</h5>
             </div>   
         </div>
-        <button className='removeCartButton' onClick={() => removeCart(id)}>Remove</button>
-        <div className='cartPrice'>
-            <p>${(Math.round(price * 100) / 100).toFixed(2)}</p>
+        <div className='cartInfoContainer'>
+            <button className='removeCartButton' onClick={() => removeCart(id)}>Remove</button>
+            <div className='cartPrice'>
+                <p>${(Math.round(price * 100) / 100).toFixed(2)}</p>
+            </div>
         </div>
+        
     </div>
   )
 }
