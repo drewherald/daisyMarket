@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import getShopItems from '../../utils/getShopItems'
 import TopBar from '../Home/TopBar';
 import DaisyFooter from '../Home/DaisyFooter';
 import '../../assets/styles/Cart/Cart.css'
 import CartItem from './CartItem';
+import { ShopContext } from '../../App'
 
-export default function Cart({cartSize, cart, removeCart}) {
+export default function Cart() {
 
     const {shopItems, error, loading} = getShopItems(16)
+    const globalShop = useContext(ShopContext)
 
     if (error) return <p>A network error was encountered</p>;
     if (loading) return (
@@ -15,12 +17,12 @@ export default function Cart({cartSize, cart, removeCart}) {
         </div>
 
     );
-    if(cartSize===0){
+    if(globalShop.cartSize===0){
         return(
             <>
 
             <div className="emptyCartContent" >
-                <TopBar cartSize={cartSize} />
+                <TopBar />
                 <p className='emptyCartText'>Your Cart is Empty</p> 
                 <br />
                 <p>Click Shop to Continue Browsing</p>
@@ -33,18 +35,15 @@ export default function Cart({cartSize, cart, removeCart}) {
         )
     }
 
-    const testVar = cart[0]
-    console.log(testVar)
-
   return (
     <>
     <section className='mainCartContent'>
         <div className="topBar" >
-            <TopBar cartSize={cartSize} />
+            <TopBar />
         </div>
         <div className='cartItems'>
-            {cart.map((cartItm) => 
-                <CartItem title = {cartItm.title} price={cartItm.price} img={cartItm.image} id={cartItm.id} removeCart={removeCart}/>
+            {globalShop.cart.map((cartItm) => 
+                <CartItem title = {cartItm.title} price={cartItm.price} img={cartItm.image} id={cartItm.id}/>
             )}
         </div>
        

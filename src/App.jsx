@@ -1,9 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, createContext } from 'react'
 import Home from './pages/Home/Home'
 import { Route, Routes } from 'react-router-dom'
 import Shop from './pages/Shop/Shop'
 import ProductDetails from './pages/Shop/ProductDetails'
 import Cart from './pages/Cart/Cart'
+
+export const ShopContext = createContext({
+  cart: [],
+  cartSize: 0,
+  updateCart: () => {},
+  removeCart: () => {}
+});
 
 export default function App() {
 
@@ -25,14 +32,14 @@ export default function App() {
   }
 
   return (
-    <>
+    <ShopContext.Provider value={{cart, cartSize, updateCart, removeCart}}>
     <Routes>
-      <Route path='/product/:id' element={<ProductDetails cartUpdater={updateCart} cart={cart} cartSize = {cartSize}/>} />
-      <Route path="/product" element={<Shop cartSize={cartSize}/>} />
-      <Route path='/cart' element = {<Cart cartSize={cartSize} cart={cart} removeCart={removeCart}  />} />
-      <Route path='/' element={<Home cartSize={cartSize}/>} />
+      <Route path='/product/:id' element={<ProductDetails />} />
+      <Route path="/product" element={<Shop />} />
+      <Route path='/cart' element = {<Cart />} />
+      <Route path='/' element={<Home />} />
     </Routes>
-    </>
+    </ShopContext.Provider>
    
   )
 }

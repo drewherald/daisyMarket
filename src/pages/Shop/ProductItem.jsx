@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import '../../assets/styles/Shop/ProductItem.css'
 import { v4 as uuidv4 } from 'uuid';
+import { ShopContext } from '../../App'
 
 function capFirst(string){
     return string.charAt(0).toUpperCase() + string.slice(1)
@@ -12,8 +13,9 @@ function formatString(string) {
     return split.join(' ')
 }
 
-export default function ProductItem({item, cartUpdater}) {
+export default function ProductItem({item}) {
 
+    const globalShop = useContext(ShopContext)
     const imgSrc = item.image
 
     const addToCart = () => {
@@ -25,7 +27,7 @@ export default function ProductItem({item, cartUpdater}) {
             id: uuidv4()
         }
 
-        cartUpdater(object)
+        globalShop.updateCart(object)
     }
 
 

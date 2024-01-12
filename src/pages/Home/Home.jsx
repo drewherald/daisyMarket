@@ -13,6 +13,8 @@ export default function Home({cartSize}) {
  /*const [load, setLoad] = useState(false)
     const f = false
     setTimeout(() => setLoad(f), 5000)*/
+   
+    
 
     const {shopItems, error, loading} = getShopItems(3)
 
@@ -28,7 +30,7 @@ export default function Home({cartSize}) {
             <>
                 <div className='mainContainer'>
                     <div className='frontPage'>
-                        <TopBar className="topbar" cartSize={cartSize}/>
+                        <TopBar className="topbar" />
                         <Featured />
                         {shopItems &&  <GridItemHolder itemList={shopItems}/>}
                         <section className='footerHome'>

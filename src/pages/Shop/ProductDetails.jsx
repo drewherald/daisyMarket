@@ -8,7 +8,7 @@ import ProductItem from './ProductItem'
 import { v4 as uuidv4 } from 'uuid'
 import DaisyFooter from '../Home/DaisyFooter'
 
-export default function ProductDetails({cartUpdater, cart, cartSize}) {
+export default function ProductDetails() {
   const id = useParams()
   const {shopItems, error, loading} = getShopItems(16)
   if (error) return <p>A network error was encountered</p>;
@@ -18,9 +18,9 @@ export default function ProductDetails({cartUpdater, cart, cartSize}) {
 
   return (
     <div className='mainFlex'>
-        <TopBar cartSize={cartSize}></TopBar>
+        <TopBar />
         <div className='mainContent' key={uuidv4()}>
-           <ProductItem item={shopItems[parseInt(id.id, 10)-1]} cartUpdater={cartUpdater} cart={cart} /> 
+           <ProductItem item={shopItems[parseInt(id.id, 10)-1]} /> 
         </div>
         <DaisyFooter />
     </div>
