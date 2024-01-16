@@ -1,3 +1,9 @@
+@media screen and (max-width: 600px){
+    .subTotal{
+        text-align: center !important;
+    }
+}
+
 .emptyCartContent{
     min-height: 100dvh;
 }
@@ -16,4 +22,9 @@
 
 .cartItems{
     padding: 0 10dvw;
+}
+
+.subTotal{
+    text-align: right;
+    padding-bottom: 50px;
 }
